@@ -1,6 +1,8 @@
 # hordijk-g2-pages
 
-This repo archives one of Rob Hordijk's websites and converts the html to PDF.
+This repo archives a website created by Rob Hordijk ([1958-2022](https://musictech.com/news/industry/rob-hordijk-dutch-creator-of-the-benjolin-blippoo-box-dies-aged-64-synth-modular/)) and converts the website html to PDF.
+
+The html archived here and the process below can be followed for converting the website to other formats using [pandoc](https://pandoc.org/).
 
 
 ## Process
