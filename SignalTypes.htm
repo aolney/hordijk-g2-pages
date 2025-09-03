@@ -1,0 +1,127 @@
+
+<!-- saved from url=(0125)https://web.archive.org/web/20240317135503fw_/https://rhordijk.home.xs4all.nl/G2Pages/SignalTypes.htm#SignalTypes_5172_999220 -->
+<html><!--<meta version="1.0">--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="./SignalTypes_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./SignalTypes_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="./SignalTypes_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://rhordijk.home.xs4all.nl/G2Pages/SignalTypes.htm","20240317135503","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1710683703");
+</script>
+<link rel="stylesheet" type="text/css" href="./SignalTypes_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./SignalTypes_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>&nbsp;</title>
+
+
+
+
+
+
+
+<!--<base target="_self">--><base href="." target="_self">
+
+<link rel="stylesheet" href="./SignalTypes_files/Default.css" type="text/css">
+
+<link rel="stylesheet" href="./SignalTypes_files/IntroHistory_4835.css">
+
+
+<link rel="stylesheet" href="./SignalTypes_files/Custom.css" type="text/css">
+
+<meta name="generator" content="RoboHELP by eHelp Corporation - www.ehelp.com - from RoboHelp for FrameMaker">
+
+<link rel="next" href="https://web.archive.org/web/20240317135503fw_/https://rhordijk.home.xs4all.nl/G2Pages/Signallevels.htm">
+
+<link rel="prev" href="https://web.archive.org/web/20240317135503fw_/https://rhordijk.home.xs4all.nl/G2Pages/G2system.htm">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+<!-- Generated Text- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+<p class="pheading_2" ps="heading 2" style="text-align:left;
+		margin-left:1.27cm;
+		margin-top:12pt;
+		margin-bottom:3pt;
+		font-family:Times New Roman;
+		font-weight:normal;
+		font-style:normal;
+		font-size:2pt;
+		letter-spacing:0em;
+		color:black;
+		line-height:2pt;
+		text-decoration:none;" origtag="heading 2">&nbsp;</p>
+
+<h2 class="pHeading1" ps="Heading1" origtag="Heading1"><a name="SignalTypes_5172_999220"></a>Signal types</h2>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="SignalTypes_5172_1000003"></a>The G2 system</h3>
+
+<p class="pBody" ps="Body" origtag="Body">The G2 system is a true modular synthesizer, meaning that there are a number of different modules, each having their own function in a sound. There is a limit to the number of modules that can be used in a sound, each module eats away a little bit of the computational resources of the DSP chips, and when all resources are in use the limit is reached. Some modules eat away more than others, so it depends a bit on the sort of patch how much modules can be used. Still, if the G2 were to be compared to an analog modular synth a G2 patch would be the equivalent of a couple of square meters of analog modules. Compare each patch to be equal or even bigger that one of the real big systems that you may have seen on pictures from the sixties and seventies. And there is a system like that in each of the four slots. The modules in the G2 are inserted in a patch by means of the editor program. Next, cables have to be drawn between inputs and outputs of the modules and this is done in the editor program as well. And although doing this is dead easy, you of course have to know what the sensible connections are. And there are many, one could possibly write several books on this subject alone.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The G2 demo software uses only one slot that is in essence one monophonic voice plus one monophonic effects section.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="SignalTypes_5172_999256"></a>Audio and control signal types</h3>
+
+<p class="pBody" ps="Body" origtag="Body">Before starting to make your own sounds on the G2 it is important to take a look at the signals that can flow from the outputs of one module into the inputs of another module. The signal outputs of modules are easily recognized, as they always have a square form. In contrast, all inputs have a round form. Trying to connect the output of a module to another output is simply not accepted by the program, which means that it is not possible to make ‘dangerous connections’ or short circuits between module outputs that could do damage to these outputs. This is very convenient, as anything that the editor program will allow you to do is completely safe. Note that on traditional analog modular synthesizers from the past it was very well possible to connect two outputs to each other and create a connection that could blow the analog circuitry.</p>
+
+<p class="pBody" ps="Body" origtag="Body">A quick summary of the connection possibilities that the editor will allow or refuse:</p>
+
+<p class="pBody" ps="Body" origtag="Body">-	An output can be connected to one or more inputs</p>
+
+<p class="pBody" ps="Body" origtag="Body">-	An input can be connected to only one output and optionally share that output with other inputs</p>
+
+<p class="pBody" ps="Body" origtag="Body">-	Two outputs can never be connected to each other</p>
+
+<p class="pBody" ps="Body" origtag="Body">-	Several inputs can be connected to each other, but they must be connected to one single output to actually receive a signal</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="SignalTypes_5172_999229"></a>Meaning of cable colouring scheme</h3>
+
+<p class="pBody" ps="Body" origtag="Body">When several inputs are connected but there is no connection to an output somewhere, the cable colours will be <font class="c_Override" cs="+Override" style="font-style:italic;">light grey</font>, meaning there is <font class="c_Override" cs="+Override" style="font-style:italic;">no signal</font> running through these cables. These light grey cables can always be connected to an output later, it is not necessary to remove these light grey cables. But there is a convenient ‘Delete Unused Cables’ function, which will clean up the patch from any optional light grey cables present in the patch. Note that when a cable is of a red, blue, yellow, orange, green and purple colour there must be always some sort of a signal running through these cables.</p>
+
+<p class="pBody" ps="Body" origtag="Body">When a module is placed in the patch its inputs and outputs have a certain default colour: red, blue or yellow. <font class="c_Override" cs="+Override" style="font-style:italic;">These</font> <font class="c_Override" cs="+Override" style="font-style:italic;">colours indicate the quality of the signal</font> and not really whether it is an audio or a control signal. It is up to you to decide if a signal really is audio or is controlling another module. When the signal is listened to it becomes audio by definition, and if it is not listened to but modulating something else, then again by definition the signal becomes a control signal. No matter if the quality of the signal would be high or low.</p>
+
+<p class="pBody" ps="Body" origtag="Body">It is best to think of red and orange signals as hifi quality and blue and yellow signals as lofi quality. Lofi signals need less handling by the DSP chips, their generation and processing eats less computing power. In contrast, all red hifi signals are computed with very advanced techniques to offer the highest sound quality possible with digital techniques. E.g. the audio waveform oscillators with their red outputs use delicate antialiasing calculations to make the waveforms sound as smooth and analog as possible. But when an envelope control signal is used to control the amplitude of an oscillator signal, the control signal itself does not really need this antialiasing; it can be safely used with the lofi blue signal quality without any audible lofi effect in the resulting enveloped red signal sounds.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="SignalTypes_5172_999233"></a>Actual sample rates in the G2 system</h3>
+
+<p class="pBody" ps="Body" origtag="Body">The signal quality depends on the sample rate of the signal. On the G2 the internal sample rate of a signal can be either 96kHz for red and orange signals or 24kHz for blue and yellow signals. Make note that green and purple coloured cables inherit the quality of the original cable, the green and purple colours are only graphic make-up applied by you and have no specific meaning.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Red and blue signals are virtual <font class="c_Override" cs="+Override" style="font-style:italic;">continuous or analog signals</font>, like those used for audio waveforms and for smoothly gliding control signals. The yellow signal has only two states and its main use is to notify musical events, like the gate signals from the keyboard. The yellow signal is in fact much like a binary signal, knowing only two values that may be interpreted as <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> or <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>, 0 or 1, false or true, etc. Modules that have both yellow inputs and yellow outputs can sometimes have their inputs and outputs changed into an orange colour. This can happen when a red signal is connected to a yellow input. When this happens the samplerate of the module is changed from 24kHz to 96kHz, enabling some logic operations to be done at the fastest possible rate within the G2. Still, these orange signals will again only have the two on and off states, though now they can be used to operate upon audio signals and retain the audio sample rate of 96 kHz. Not all yellow inputs will have this behaviour, e.g. the envelope modules will not change to orange, but e.g. the sequencer modules and modules from the logic tab will. This enables some modules with yellow inputs to produce audio signals, e.g. the sequencer modules can be run at full audio speed to be used to create audio signals themselves.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Red 96kHz signals are the primary choice for audio signals. Oscillator modules will always have a red output to insure the highest audio quality. Blue signals are commonly used for control signals like envelopes and low frequency modulation signals, as these signal types do not need to be updated at very high speeds. In general it is said that it suffices to update an envelope signal a couple of hundred times a second. And on many other systems, like some softsynths, it is not uncommon to update envelopes and other control signals at a rate which is one hundredth of the audio samplerate, so when the sample rate is 48kHz the control signals would be updated 480 times a second. On the G2 however, the blue signals are always at a quarter of the red samplerate of 96kHz, so at 24kHz. The advantage is that this 24kHz lies just above the hearing range. On the G2 any zippery noises caused by the control signal being updated are now just above the hearing range and cannot be heard, though it might start your dog barking. The G2 has audibly a clear advantage over many other softsynth products here.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Still, a blue signal can be used as an audio signal, e.g. by using the output of a low frequency oscillator, which would normally be used as a control signal, and set the pitch to an audio frequency. This signal will have a slightly ‘lofi’ sound character when compared to the red signal from an audio oscillator module, but this lofi effect can of course be a wanted feature in your sound. It is totally up to you if you want to use the blue signals to carry your audio.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Most modules that process a signal or sound, like mixers, have a blue input by default. When the blue input is connected to a red output signal from another module the blue input turns into red and also the blue output of that module turns into red, if it wasn’t already. This is a very convenient feature, as it optimises the DSP power used by the patch. The optimisation process for the patch, also named recompiling, necessarily has to briefly silence the G2 when a module changes from a blue to a red colour. During this moment all the DSP programming code is reshuffled to optimise the resources the DSP uses. This takes only a very short while, almost unnoticeable, but all modules will fall back to their initial states, meaning that e.g. a low frequency oscillator waveform is reset to its initial start-up value and sequencers restart at their first step. This silencing is in all practicality unavoidable on a system like the G2, the fact that adding a module or reconnecting a cable changes the ‘architecture’ of the synth model in the patch must mean that something must happen to cause that. While this happens the system simply does not know how to calculate audio as the code to calculate is momentarily out of order. This causes the brief silence, until the internal reshuffling is done and the system continues to do its musical work for you. This silencing happens when a patch is loaded in a slot, when the polyphony of a slot is changed or when in the editor program a new module is placed or a cable is connected to an input of a module.</p>
+
+<p class="pBody" ps="Body" origtag="Body">&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

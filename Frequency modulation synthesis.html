@@ -1,0 +1,108 @@
+
+<!-- saved from url=(0092)https://web.archive.org/web/20240317135543fw_/https://rhordijk.home.xs4all.nl/G2Pages/FM.htm -->
+<html><!--<meta version="1.0">--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="./Frequency modulation synthesis_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Frequency modulation synthesis_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="./Frequency modulation synthesis_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://rhordijk.home.xs4all.nl/G2Pages/FM.htm","20240317135543","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1710683743");
+</script>
+<link rel="stylesheet" type="text/css" href="./Frequency modulation synthesis_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Frequency modulation synthesis_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>Frequency modulation synthesis</title>
+
+
+
+
+
+
+
+<!--<base target="_self">--><base href="." target="_self">
+
+<link rel="stylesheet" href="./Frequency modulation synthesis_files/Default.css" type="text/css">
+
+<link rel="stylesheet" href="./Frequency modulation synthesis_files/IntroHistory_4835.css">
+
+
+<link rel="stylesheet" href="./Frequency modulation synthesis_files/Custom.css" type="text/css">
+
+<meta name="generator" content="RoboHELP by eHelp Corporation - www.ehelp.com - from RoboHelp for FrameMaker">
+
+<link rel="next" href="https://web.archive.org/web/20240317135543fw_/https://rhordijk.home.xs4all.nl/G2Pages/Loopers.htm">
+
+<link rel="prev" href="https://web.archive.org/web/20240317135543fw_/https://rhordijk.home.xs4all.nl/G2Pages/HrmDistortion.htm">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+<!-- Generated Text- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+<h2 class="pHeading1" ps="Heading1" origtag="Heading1"><a name="FM_2410_999840"></a>Frequency modulation synthesis</h2>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="FM_2410_999844"></a>Introduction to FM</h3>
+
+<p class="pBody" ps="Body" origtag="Body">FM synthesis is in general considered to be complex, possibly because the wellknown DX7-type synthesizers from the eighties offered a complex model that only very few knew how to handle. Still, FM doesn't have to be complex. It is very well possible to use a hands-on approach that quickly leads to the wanted results. It is not at all necessary to know the math that was used in the past to describe FM, instead it is more worthwhile to experiment with simple patches using only one or two oscillators and building experience from there on.</p>
+
+<p class="pBody" ps="Body" origtag="Body">In essence FM is the modulation of the frequency parameter of an oscillator with a signal in the audio range, meaning that FM can be used on any oscillator that lets itself be smoothly controlled in frequency at audio range. For the FM technique the oscillators must be absolutely stable to get predictable results. Most analog oscillators are not stable enough, so FM is almost exclusively used on digital synthesizers.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="FM_2410_999846"></a>Modulating the frequency parameter</h3>
+
+<p class="pBody" ps="Body" origtag="Body">The frequency parameter can be modulated in a linear or in an exponential fashion. When using exponential modulation, by using a Keyboard Pitch or V/Oct input, the results are easily enharmonic. Using linear modulation gives much better results, but requires a dedicated FM or V/Hz control input on the oscillator. It goes too far to explain in detail the difference between these two input types, as a rule of thumb just remember that a Pitch input is relatively useless for FM in the audio range and in general the dedicated FM input is used instead. Some digital oscillators have an option  to modulate the momentary phase position of the waveform instead of the actual frequency parameter, which can be imagined like shifting the waveform forwards and backwards in time. E.g. on the DX7 it is in fact the waveform phase position that is modulated and not the linear frequency parameter. The main difference is that phase modulation does not detune the basic pitch of the oscillator when the oscillator is modulating itself. If this 'selfmodulation' is instead applied on a true linear frequency modulation input (like on an analog oscillator) it will in fact severely detune the oscillator.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="FM_2410_999848"></a>Creating timbres</h3>
+
+<p class="pBody" ps="Body" origtag="Body">Creating timbres with FM is based on the priciple that there is a tight relationship between amplitude modulation and frequency modulation. Imagine a graph of a waveform, e.g. the graph of a triangle wave. This graph is a two dimensional picture with an X-axis that denotes time and a Y-axis that denotes amplitude. This picture can be distorted vertically, in which case the distortion is named amplitude modulation. It can also be distorted horizontally, and then the distortion is named frequency modulation. It can also be distorted in both directions, which has no special name. In all three cases the waveshape will change and thus create a new timbre. In general this technique is named waveshaping, creating a new waveform with a different timbre from some basic waveform. The interesting and almost paradoxal thing is that amplitude modulation is in certain cases able to keep the waveform intact and only cause a steady change in frequency. And in certain well-defined cases frequency modulation is able to create new waveforms at the original pitch. These last cases is what FM synthesis is all about.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="FM_2410_999850"></a>Linear FM with two oscillators</h3>
+
+<p class="pBody" ps="Body" origtag="Body">When one oscillator is used to FM modulate another oscillator the oscillator that gets modulated is commonly named the carrier-wave oscillator or simply the carrier. The oscillator which modulates the carrier is named the modulator. When using one carrier and one modulator there are four factors that define the resulting timbre of the modulated waveform.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The first factor is which waveforms are used on the carrier and on the modulator. Many dedicated FM synthesizers use sinewaves for both the carrier and the modulator. But FM can be done with any waveform for the modulating oscillator and most waveforms for the carrier.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The second factor is the detuning or frequency relation of the carrier and the modulator, which is named the frequency ratio. The frequency of the carrier is the reference frequency to define the ratio, meaning that the ratio can be simply calculated by dividing the modulator frequency by the carrier frequency, while using the values in Hertz for the division. If the modulator is tuned to a harmonic of the carrier, this ratio will always be a whole number that is also the number of the harmonic. E.g., if the carrier is tuned to 100 Hz and the modulator is tuned to 300 Hz the ratio is 3:1 (and 300 Hz is also the third harmonic for 100 Hz). Often the ratio of both the carrier and modulator is not set in relation to each other, but in relation to the pitch of the note played on the keyboard. In this case both carrier and modulator have a separate ratio setting, e.g. 4:1 for the carrier and 6:1 for the modulator. The relation between the carrier and the modulator will now be the ratio of the modulator divided by the ratio of the carrier, in the example 6:1/4:1 =&gt; 6:4 =&gt; 3:2. If the ratio is a whole number like 3:1 or a simple rational number that happens to be a pure chord interval, like 3;2, 4:3, 3:5, etc., the resulting timbre of the modulation will sound harmonic. But if the ratio is 'more difficult', like 1:3,57342, the modulation will generate so many unrelated partials that the timbre will sound distinctly enharmonic.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The third factor that defines the resulting timbre is the depth of the modulation. The modulation depth is defined by the amplitude of the modulating signal only, increasing this amplitude will 'widen' the frequency sweep of the carrier. In general deeper modulation will create a brighter timbre as it will 'sweep through' more widely spread harmonics of the carrier pitch. The modulation depth can be expressed as the difference between the basic frequency of the carrier and the maximum frequency the carrier can reach in the frequency sweep caused by the modulation. This relation is named the frequency deviation. E.g. if the basic carrier frequency is 1000 Hz and the modulation will cause the carrier to sweep between 600 Hz and 1400 Hz, the frequency deviation is 400 Hz.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The fourth factor is the phaseshift between the carrier waveform and the modulator waveform. If both the carrier and the modulator use the same waveform and are set to the same basic pitch and the modulation depth is constant, the timbre will still change dramatically if the modulator waveform is shifted in phase compared to the carrier waveform. This phase shift is the little devil with FM synthesis. The first three factors can in general be easily and exactly set, but this phase shift can still mess up these three settings, as the phase shift between two oscillators is basically undefined. Simply because both oscillators are independent modules and 'have no knowledge what the other one does'. Some extra vibrato LFO modulation on one or both oscillators can also cause apparently random phase shifts between the two oscillators. The only thing that can be done to get control on this phase shift is to force or reset both oscillators to a predefined phase position on a keyboard trigger, and probably restart the extra modulating LFO's as well on a key press. The simplest way to do this restart thing is to connect the keyboard gate or trigger signal to the hardsync inputs on both oscillators and optionally the reset inputs on LFO's. This will force these modules to reset their waveforms on a keypress and give a predictable sound on each keypress. While doing experiments with FM it is adviseable to use this hardsync trick with the keyboard trigger signal to eliminate the effects of this phase shift factor. In a later stage you can always disconnect one or more hardsync inputs to get a more lively sound, but you will most certainly notice changes in timbre on each new note.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="FM_2410_999856"></a>FM tracking modes</h3>
+
+<p class="pBody" ps="Body" origtag="Body">There are two possible modes when a single carrier is modulated by a single modulator. The first mode is to create formant areas in the audio spectrum that will stay on the same spot in the spectrum when different notes are played. In this mode the amplitude of the modulating signal is kept constant over the keyboard range. The second mode is to keep the resulting waveform constant over the keyboard range, just like how a sawtooth is the same shape for each key. This mode also creates a formant structure in the sound, but the formant areas glide along with the pitch. This is similar to the keyboard tracking of a filter, the first mode is like no tracking and the second mode is like full tracking. In the FM Trk mode the amplitude of the modulation signal is scaled to the keyboard pitch, higher notes will increase the amplitude as the deviation must increase, e.g. when the sweep spans 110 Hz for a 440 Hz pitch it must increase to span 220 Hz for a 880 Hz pitch. On the G2 oscillators these modes are named FM Lin and FM Trk, where FM Trk is the full tracking mode. The scaling for the tracking mode is conveniently built in on the FM input on the oscillators. For non-sine waveforms it is often best to choose for the FM Trk mode to prevent an unrealistic nosey effect in the timbre when playing up and down the keyboard. In fact, the FM Trk mode can best be seen as a way to get a freely shapable steady waveform that can later be filtered, just like how one would use the standard waveforms. Technically the difference between FM Lin and FM Trk is 'fixed formant' versus 'fixed modulation index'. But what is more important is that when the modulation depth is increased in FM Trk mode it will increase the brightness of the sound with a pleasing 'buzzy' type of timbral change, turning the modulation depth knob into a control similar to the Cutoff on a filter. The Phase Mod input on the OscPM is always in FM Trk mode. </p>
+
+<p class="pBody" ps="Body" origtag="Body">The only thing that is now left to be chosen is the waveforms to be used for the carrier and the modulator and a suitable detune ratio between the two oscillators. On the modulator any waveform can be used, but for the carrier it is best to avoid waveforms with flanks, like the sawtooth. The sinewave and the triangle wave are good choices for the carrier. Using the pulse wave on the carrier will give a harsh sound, which can actually be quite nice, but should be treated with care. At the modulator side it is especially the pulse wave that is very suitable, as it will have the effect of alternatingly change the slope direction of the waveform, which works especially well on a triangle carrier waveform. PWM modulation on the modulator is also a nice effect that works out very well. Using the OscShape as the modulator and modulating its waveshape gives even more possible waveforms.</p>
+
+<p class="pBody" ps="Body" origtag="Body">&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

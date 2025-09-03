@@ -1,0 +1,536 @@
+
+<!-- saved from url=(0145)https://web.archive.org/web/20240317135526fw_/https://rhordijk.home.xs4all.nl/G2Pages/EventsAndLogicSignals.htm#EventsAndLogicSignals_6466_999210 -->
+<html><!--<meta version="1.0">--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="./EventsAndLogicSignals_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./EventsAndLogicSignals_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="./EventsAndLogicSignals_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://rhordijk.home.xs4all.nl/G2Pages/EventsAndLogicSignals.htm","20240317135526","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1710683726");
+</script>
+<link rel="stylesheet" type="text/css" href="./EventsAndLogicSignals_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./EventsAndLogicSignals_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>&nbsp;</title>
+
+
+
+
+
+
+
+<!--<base target="_self">--><base href="." target="_self">
+
+<link rel="stylesheet" href="./EventsAndLogicSignals_files/Default.css" type="text/css">
+
+<link rel="stylesheet" href="./EventsAndLogicSignals_files/EventsAndLogicSignals_6466.css">
+
+
+<link rel="stylesheet" href="./EventsAndLogicSignals_files/Custom.css" type="text/css">
+
+<meta name="generator" content="RoboHELP by eHelp Corporation - www.ehelp.com - from RoboHelp for FrameMaker">
+
+<link rel="next" href="https://web.archive.org/web/20240317135526fw_/https://rhordijk.home.xs4all.nl/G2Pages/SoundSources.htm">
+
+<link rel="prev" href="https://web.archive.org/web/20240317135526fw_/https://rhordijk.home.xs4all.nl/G2Pages/Mixing.htm">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+<!-- Generated Text- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+<p class="pheading_2" ps="heading 2" style="text-align:left;
+		margin-left:1.27cm;
+		margin-top:12pt;
+		margin-bottom:3pt;
+		font-family:Times New Roman;
+		font-weight:normal;
+		font-style:normal;
+		font-size:2pt;
+		letter-spacing:0em;
+		color:black;
+		line-height:2pt;
+		text-decoration:none;" origtag="heading 2">&nbsp;</p>
+
+<h2 class="pHeading1" ps="Heading1" origtag="Heading1"><a name="EventsAndLogicSignals_6466_999210"></a>Handling musical events in a logical way</h2>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="EventsAndLogicSignals_6466_999212"></a>Introduction to logic</h3>
+
+<p class="pBody" ps="Body" origtag="Body">There must be some logic in having logic modules in a modular synthesizer, and yes there is. Logic is quite similar to mixing, it is just that another type of signal is used and that the sort of methods used to combine signals in logic offers different sorts of manipulations as those found in mixing. The idea about logic is that there are signals that flag musical events. The most obvious event is the playing of a single musical note on the keyboard. The signal that flags to the patch that a key is pressed is named the <font class="c_Override" cs="+Override" style="font-style:italic;">keyboard gate signal</font>. This signal is either <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> or <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>. In the chapter about signal types was described that the yellow and orange signals can have only two states, on or off. These on and off signals are the foundation of logic. So, logic is nothing else but the manipulating of signals that can be either on or off.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="EventsAndLogicSignals_6466_999891"></a>Keeping time</h3>
+
+<p class="pBody" ps="Body" origtag="Body">Next to the keyboard gate signal there is another commonly used type of logic signals named <font class="c_Override" cs="+Override" style="font-style:italic;">clock signals </font>or<font class="c_Override" cs="+Override" style="font-style:italic;"> timing signals</font>. Clock signals allow for the timing of events, e.g. a sequencer has to advance steps in a certain rhythm and the clock signal will tell the sequencer <font class="c_Override" cs="+Override" style="font-style:italic;">when</font> to advance a step. It is best to consider a clock signal as some sort of <font class="c_Override" cs="+Override" style="font-style:italic;">metronome</font> signal. And like human musicians use a metronome to time their play, there are many modules that can listen to clock signals and <font class="c_Override" cs="+Override" style="font-style:italic;">synchronize</font> their effect to the clock.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Signals that can be used as clock signals for other modules can come from several sources. Probably the most well known clock signal source these days is the MIDI masterclock. This is musically a very important signal, as it can synchronize several MIDI devices and computer programs to each other. In a MIDI set-up there can be only one device generating a MIDI masterclock signal, all other device must listen to this masterclock. In most situations a drum computer or a sequencer program running on a computer is used to generate the MIDI masterclock. When a MIDI clock signal is present and running on the MIDI input of the G2 there are several functions, like the arpeggiator, that immediately start to synchronize automatically to this MIDI clock. The tempo of the MIDI clock will show in the G2 Master Clock display in BPM. This display of BPM values of incoming MIDI clock signals on devices is not always shown absolutely accurate. It should be accurate on the device that is generating the masterclock, but for all the machines that slave to this clock the MIDI clock rate must first be measured before it can be displayed. When the masterclock is not completely stable, which can be due to heavy traffic over the MIDI cable, the measured BPM value in the display might flicker a bit. This is absolutely normal and the displayed value should only be seen as an approximation. It is only a quick indication of the tempo, and not the absolutely exact tempo value. To know the exact tempo value, always have a look at the display on the <font class="c_Override" cs="+Override" style="font-style:italic;">masterclock</font> device. When there is no MIDI clock to slave to, the G2 has its own built-in masterclock generator that takes over automatically. In the patch a module can be placed that is named the Clock Generator module and this module has a setting that has two options, Master and Internal. When set to Master the clock output signals will slave to either the MIDI clock or the G2 masterclock, depending on whether a MIDI clock is sensed on the MIDI input. When the module is set to Internal the module itself generates a clock signal that is only available in the patch/slot itself and independent from the masterclock and clocks in other slots. To synchronize a patch to a MIDI masterclock from another device the Clock Generator module must be put in the patch and the module must be set to the Master setting.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Instead of using a dedicated clock generator signal a low frequency oscillator can also be used to provide modules with a clock signal. In fact even an audio oscillator can be used for a clock source to create hyper fast tempi effects.</p>
+
+<p class="pBody" ps="Body" origtag="Body">A yellow or orange clock signal goes <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> and <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> and <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> and <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>, etc. In the <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> state the output signal is at a fixed level of +64 units and in the <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> state the level is fixed at 0 units. This means that the signal can be used directly to chop an audio signal when the audio signal is fed into one input of a gain controller module and the clock signal is fed into the other input of the gain controller. The zero unit level will shut off the audio while the +64 unit level will pass the audio at unity gain. This way the clock signal is used as an audio gate control signal. The signal is named <font class="c_Override" cs="+Override" style="font-style:italic;">gate</font> signal as it can literally open or close a door or gate. And this door is either fully open or fully closed; there is no halfway open. A yellow input literally works this way, if the signal on a yellow input is zero units or negative it interprets the signal as a closed door. When the signal gets slightly positive, so the door opens just a little bit it interprets the door as being fully open. Just remember that with a yellow input there is no such thing as a half open door. This means that although a yellow output will produce a signal of either 0 or +64 units, a yellow input only looks if the signal is any positive value, which means door open, or if it is zero or a negative value, which means door closed. How a yellow input interprets its input value is very important to realize, as any signal type can be fed into this input. E.g., when a triangle LFO signal is connected to a yellow input, the input will think that the gate is <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> when the triangle is in its positive upper half of its waveform, while the yellow input thinks that the gate is <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> during the time the triangle is in its negative lower half of its waveform. So, <font class="c_Override" cs="+Override" style="font-style:italic;">any type of signal can by connected to a yellow input</font> and will be interpreted by the module as a logic signal. In contrast it is the yellow <font class="c_Override" cs="+Override" style="font-style:italic;">outputs</font> that can only produce the two <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> and <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> levels. This means that e.g. a LFO can rhythmically start an envelope module when the LFO signal is connected to the envelope module yellow input.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="EventsAndLogicSignals_6466_999895"></a>Combining logic signals</h3>
+
+<p class="pBody" ps="Body" origtag="Body">There are several situations imaginable where two yellow logic output signals need to be mixed in some way by combining them. An example is when a sequencer needs to be temporarily stopped for some beats and restarted later. In this case there is the clock signal that steps the sequencer and a second signal that defines when the sequencer runs or is stopped. This second signal is in essence a gate signal, as it can be used to open and close a gate where the clock signal has to pass through. It doesn’t really matter now where the gate signal comes from, as what is needed here is a module that acts as the door and can be opened and closed by the control signal. When taking a look at the logic modules tab in the editor program the leftmost module in the Logic tab is conveniently named a Gate module. This module is not a module that creates gate signals by itself, instead it is the ‘door’ module that can pass or block a logic signal depending on the <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> or <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> state of another logic signal. This module is the logic equivalent of a two input mixer, but acts specifically on logic signals. Like the two input mixer the two inputs are exchangeable and the module can do six combinations of operations on two logic signals. These operations should be looked at as various possible ways to mix logic signals. Mixing is not really the good word here; instead the word <font class="c_Override" cs="+Override" style="font-style:italic;">combining</font> is better. The most useful combination is the AND function. This means that AND input one AND input two must have a logic <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> signal to produce a logic <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> signal on the output. This means that if one of the signals is <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> the other signal is effectively blocked in the module. So, this AND function is our door for the clock signal to be interrupted by the other signal, by feeding the clock signal to one input the signal on the other input defines whether the clock signal is passed on or is blocked. So, if the signal on the other input is the keyboard gate signal the clock will only be passed through the module when a key is pressed.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Working with logic signals needs some getting used to, initially it might be confusing, but in reality it is often very simple. Just remember that the signals on the input both have some musical meaning, like a clock signal stepping a sequencer or like a key press signal from the keyboard.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The six combinations are shown with little tables that exactly describe how the possible signals on the inputs will combine into a certain output signal. These tables are named <font class="c_Override" cs="+Override" style="font-style:italic;">truth tables</font>, as ‘they tell in logic truth’ what will happen in the module. There are three basic functions, the AND the OR and the XOR. The other three are the same, only the output is additionally inverted after the function is applied on the two input signals. Study this table well and try to understand what happens with each function when on one input is a clock signal and on the other input is a keyboard gate signal.</p>
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 1: AND function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">AND</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 2: NAND function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">NAND</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 3: OR function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">OR</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 4: NOR function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">NOR</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 5: XOR function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">XOR</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+
+
+
+<table origtag="Format A" ts="Format A" class="tFormat_A" border="0" bordercolor="black" cellpadding="0" cellspacing="0" style="width:2.952756in; height:0.97222in;" summary="" title="">
+
+<caption valign="top" style="padding-bottom:6pt;">
+<p class="pTableTitle" ps="TableTitle" origtag="TableTitle">Table 6: XNOR function</p>
+</caption>
+
+<thead>
+<tr align="left" valign="top" style="height:22px;">
+	
+	<th class="tTableCellType_1">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">XNOR</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">low</p>
+	</th>
+	
+	<th class="tTableCellType_2">
+	
+	<p class="pCellHeading" ps="CellHeading" origtag="CellHeading">high</p>
+	</th>
+</tr>
+</thead>
+
+<tbody>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_3">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_4">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+</tr>
+<tr align="left" valign="top" style="height:17px;">
+	
+	<td class="tTableCellType_5">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">low</p>
+	</td>
+	
+	<td class="tTableCellType_6">
+	
+	<p class="pCellBody" ps="CellBody" origtag="CellBody">high</p>
+	</td>
+</tr>
+</tbody>
+
+</table>
+
+
+<h3 class="pHeading2" ps="Heading2" style="" origtag="Heading2"><a name="EventsAndLogicSignals_6466_1000463"></a>Triggers and triggering</h3>
+
+<p class="pBody" ps="Body" origtag="Body">Yellow inputs can react on the <font class="c_Override" cs="+Override" style="font-style:italic;">level</font> of the input signal, but there is also the possibility that it only reacts on the <font class="c_Override" cs="+Override" style="font-style:italic;">moment the signal changes</font> from off to on. This moment defines the exact instant when something <font class="c_Override" cs="+Override" style="font-style:italic;">starts to happen</font> and there are modules that use only this moment to do something. A good example is the decay envelope module. This module will immediately start its envelope when the signal on its yellow input goes from off to on. But it doesn’t do anything with the information of how long the gate signal is on. This behaviour is named <font class="c_Override" cs="+Override" style="font-style:italic;">edge triggering</font>. Another way to say this is that the yellow decay envelope input is not gated but <font class="c_Override" cs="+Override" style="font-style:italic;">triggered</font>. In essence there are two ways modules can use logic signals, as gates and as triggers. In practice it might be the same pulse signal, but when a module uses the starting edge or flank of the pulse it is named a trigger and when it uses the whole length of the pulse signal it is named a gate. So, it all depends on how the yellow input works whether to name the pulse on this input a trigger or a gate signal. When there is a little arrow drawn next to a yellow input the module will be triggered, or start its work on the moment the input signal goes to its <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> state and ignore the moment when the input signal goes <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>. The little arrow actually makes clear if the module is triggered. The ADSR envelope module is a clear example of a gated module, as on the ADSR module the envelope will remain in its sustain phase as long as the gate signal on the yellow input remains in its <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> state.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="EventsAndLogicSignals_6466_999222"></a>Summary</h3>
+
+<p class="pBody" ps="Body" origtag="Body">To summarize, logic is about musical events and about timing and clock signals. These events are in general represented by yellow signals. A yellow output signal can only have the two levels <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> and <font class="c_Override" cs="+Override" style="font-style:italic;">off</font> represented by the values 0 and +64 units. But any type of signal can be used to connect to a yellow input and be interpreted as an <font class="c_Override" cs="+Override" style="font-style:italic;">on/off</font> signal, where any positive value is seen as <font class="c_Override" cs="+Override" style="font-style:italic;">on</font>, and zero plus any negative value is seen as <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>. Yellow <font class="c_Override" cs="+Override" style="font-style:italic;">gate</font> inputs will react on the <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> level and how long the <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> level stays active, while yellow <font class="c_Override" cs="+Override" style="font-style:italic;">trigger</font> inputs only react to the moment when the signal on this triggered input flips into an <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> state.</p>
+
+<p class="pBody" ps="Body" origtag="Body">The manipulation functions of the modules in the Logic tab all relate to the processing and combining of timing signals, synchronization and signals that flag a musical event.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="EventsAndLogicSignals_6466_999905"></a>Conclusion</h3>
+
+<p class="pBody" ps="Body" origtag="Body">Sometimes two logic signals need to be synchronised, and example is when a key press must be delayed until a clock generator module flags a sixteenth note or the start of a new bar. The module that can help here is the Sample and Hold module. When the clock signal is connected to the trigger input of the S&amp;H; module and the keyboard gate is connected to the value input of the S&amp;H; the module will ‘test’ on every pulse of the clock signal if the keyboard gate is on or off. And if it is on it will pass it on to the output right at the triggering edge of the clock, so at the start of a note in the beat. By using a S&amp;H; module this way the keyboard can be timed to the tempo clock and all notes pressed on the keyboard will be exactly in beat. This is especially handy when a sequence of notes programmed in a sequencer module needs to be transposed. By using a S&amp;H; on both the keyboard note value and the keyboard gate signal and adding the sampled keyboard note value to the sequencer note value the transposition can be timed automatically to the beat. This method of using a S&amp;H; module is an important technique to get things in sync, whenever there is a need to get things in sync and they don’t do so automatically always remember to try to use a S&amp;H; module to solve the timing issue. When the S&amp;H; module samples a logic signal the effect is that the change of the logic signal is always delayed until the clock pulse on the trigger input of the S&amp;H; arrives.</p>
+
+<p class="pBody" ps="Body" origtag="Body">&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

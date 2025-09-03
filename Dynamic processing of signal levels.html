@@ -1,0 +1,130 @@
+
+<!-- saved from url=(0133)https://web.archive.org/web/20240317135740fw_/https://rhordijk.home.xs4all.nl/G2Pages/LevelProcessing.htm#LevelProcessing_5890_999210 -->
+<html><!--<meta version="1.0">--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="./Dynamic processing of signal levels_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./Dynamic processing of signal levels_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="./Dynamic processing of signal levels_files/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://rhordijk.home.xs4all.nl/G2Pages/LevelProcessing.htm","20240317135740","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1710683860");
+</script>
+<link rel="stylesheet" type="text/css" href="./Dynamic processing of signal levels_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./Dynamic processing of signal levels_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+<title>Dynamic processing of signal levels</title>
+
+
+
+
+
+
+
+<!--<base target="_self">--><base href="." target="_self">
+
+<link rel="stylesheet" href="./Dynamic processing of signal levels_files/Default.css" type="text/css">
+
+<link rel="stylesheet" href="./Dynamic processing of signal levels_files/IntroHistory_4835.css">
+
+
+<link rel="stylesheet" href="./Dynamic processing of signal levels_files/Custom.css" type="text/css">
+
+<meta name="generator" content="RoboHELP by eHelp Corporation - www.ehelp.com - from RoboHelp for FrameMaker">
+
+<link rel="next" href="https://web.archive.org/web/20240317135740fw_/https://rhordijk.home.xs4all.nl/G2Pages/Distortion.htm">
+
+<link rel="prev" href="https://web.archive.org/web/20240317135740fw_/https://rhordijk.home.xs4all.nl/G2Pages/Noise.htm">
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+<!-- Generated Text- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
+
+<p class="pcaption" ps="caption" style="text-align:left;
+		temp-text-indent:2.2225cm;
+		margin-left:2.2225cm;
+		margin-top:6pt;
+		margin-bottom:6pt;
+		font-family:Times New Roman;
+		font-weight:bold;
+		font-style:normal;
+		font-size:2pt;
+		letter-spacing:0em;
+		color:black;
+		text-indent:0cm;
+		line-height:2pt;
+		text-decoration:none;" origtag="caption">&nbsp;</p>
+
+<h2 class="pHeading1" ps="Heading1" origtag="Heading1"><a name="LevelProcessing_5890_999210"></a>Dynamic processing of signal levels</h2>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="LevelProcessing_5890_999211"></a>Introduction</h3>
+
+<p class="pBody" ps="Body" origtag="Body">An important property of the G2 is that every module can handle every type of signal, such as dynamically varying signals like audio signals, slowly changing control signals like those from low frequency oscillators and envelope generators and static signals that have a fixed value that might have been set by a panel knob. Such a fixed or <font class="c_Override" cs="+Override" style="font-style:italic;">static value</font> is named a Level signal, just as the value has a certain level that remains fixed to the value it is set to. There are many signals that are static by nature. A good example of such a static signal is the note value in a monophonic patch, after a key is pressed the note value of that key will be static, until a new key is pressed. Gate signals are also static, as long as a key remains pressed the keyboard gate signal stays in the fixed mode <font class="c_Override" cs="+Override" style="font-style:italic;">on</font> that is represented by a static level of +64 units. And when the key is depressed the gate goes in the fixed mode <font class="c_Override" cs="+Override" style="font-style:italic;">off</font>, producing a static level of 0 units. Such a gate signal can be routed into any module and several modules can sometimes do unexpected sensible things with the gate signal. An example is when a gate signal is fed into the audio input of a filter. When the filter is set to lowpass the flanks of the gate signal will not rise sharply anymore but become smoother. And when the filter is set to highpass there will be a short click on the output of the filter every time the gate changes state. These clicks can be used as an audio signal, to produce rhythmic clicking sounds where the filter shapes the timbre of the click. But the clicks can also be used as a very fast envelope over another sound to produce short blips. The general point of interest is that static levels can be processed in many ways to serve a multitude of musical purposes.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="LevelProcessing_5890_999874"></a>Algebraic operations</h3>
+
+<p class="pBody" ps="Body" origtag="Body">A very interesting use of static levels is to do simple algebraic operations. A simple musical example is transposing an incoming MIDI note by one octave and retransmitting it to another MIDI device. To transpose a note all that is necessary is to add a static level to the note value. The value of the static level is the amount of transposition that will be given to the incoming notes. Adding a positive value will transpose the notes up, while adding a negative value will transpose them down, adding a static level of +12 units will transpose the note up by one octave. But there is much, much more that can be done. At the end of the fifties and first half of the sixties there was a device that looked remarkably similar to the analog modular synthesizer. This device was named the <font class="c_Override" cs="+Override" style="font-style:italic;">analog computer</font> and was used to do arithmetic computations. This analog computer hasn’t been used for long, as it was very soon replaced by the pocket calculator. But the interesting thing about analog computers was that they were modular, just like a modular synthesizer, only the modules did arithmetic operations like addition, subtraction and multiplication instead of the waveform generation and waveform processing done by a sound synthesizer. Next to algebraic modules there were modules that could provide a level with a value that could be set with a knob. Patchcords were used to connect inputs and outputs, and many of the circuits used in the analog computers were also used in the first modular synthesizers. These analog computers could be used to patch a mathematical function, setting variables by the value dials and then read the result on a meter at the output. The G2 has many of the modules that were present on those analog computers available in the Level and Mixer tabs. And these modules can be used to do many things that are absolutely unavailable on other keyboard synthesizers. Addition of two values is simply a mixing function, when two values are fed into two inputs of a mixer there will be a value at the output that is simply a sum of the input values. Similarly, inverting one of the mixer inputs with the invert button next to the input does a subtraction. And the Level multiplier module is in fact a multiplication function. This means that there is also a type of mixing possible that can implement some sort of user definable function. Such a function can be used for algorithmic composing purposes, but can also be used to process audio signals. Mathematical functions can actually do musically interesting things to a sound signal. A good example is when a sine wave is fed into both inputs of a G2 Level multiplier module. When this is done, there will also be a sine wave signal at the output, but this new sine wave will have <font class="c_Override" cs="+Override" style="font-style:italic;">twice the frequency</font> of the input signal. Mathematically the sine is raised to the power of two, so the sine becomes a sine^2 signal or the quadrature of the original sine.</p>
+
+
+<div class="container_Image" cts="Image" align="left">
+<img class="image_Default" src="./Dynamic processing of signal levels_files/Figure1.jpg" altsrc="" width="603" height="220" border="0" bordercolor="0" style="margin-left:4px;
+		margin-top:4px;
+		margin-right:17px;
+		margin-bottom:4px;">
+</div>
+
+<p class="pcaption" ps="caption" style="temp-text-indent:0.07937cm;
+		margin-left:0.07937cm;
+		margin-top:6pt;
+		font-family:Times New Roman;
+		font-weight:bold;
+		font-style:normal;
+		font-size:10pt;
+		letter-spacing:0em;
+		color:black;
+		text-indent:0cm;
+		line-height:18pt;
+		text-decoration:none;" origtag="caption">Figure 1 - Sine wave and its quadrature at double frequency</p>
+
+<p class="pBody" ps="Body" origtag="Body">Figure 1 shows how this frequency doubling effect comes about. The straight line is the original sine wave and the dotted line is its quadrate. From the picture it becomes clear that the frequency doubling effect is caused by the fact that multiplying two negative numbers will have a positive result, so the negative half of the sine wave is flipped up to a second positive half, creating two positive peaks instead of the original one positive peak.</p>
+
+<p class="pBody" ps="Body" origtag="Body">Doubling a frequency is of course of great musical interest, as it will produce a signal with a pitch that is exactly an octave above the pitch of the original signal. Which is in fact the second harmonic for the original sine wave. So, here is a clue to generate second harmonic distortion. Regrettably, frequency doubling only happens reliably under specific circumstances, so what works very well with a sine wave of amplitude 1 may give strange results with other waveforms of varying amplitudes. In general the patching of functions and applying them to waveforms will work very well for some waveforms and could totally mess up others. Meaning that this is not a general technique, like filtering that can be applied to any signal with predictable results. But for those instances where it works out well, there is no reason not to explore this technique. In fact all waveshaping and distortion techniques can be translated into some simpler or more complex mathematical function. Many modules doing distortions have some sort of function internally programmed into their programming code. The details of this technique need a chapter by itself, right now it is important to realize that, next to sound processing, the G2 can do computations on signals as well. As an example, by using the G2 as some sort of analog computer, incoming MIDI information can be processed in simple or more complex ways and then retransmitted with the MIDI out modules to other MIDI equipped gear. And on the audio level, when the quadrate of the output signal of a Phase Modulation oscillator is taken by feeding the output signal into both inputs of a Level multiplier module and the output of the Level multiplier is fed back into the PM modulation input, the oscillator will start to generate a signal with only odd harmonics. Such a signal sounds like the typical ‘hollow’ sound of a square wave oscillator. Increasing the amount of feedback can increase the brightness of this odd harmonics sound.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="LevelProcessing_5890_999878"></a>Headroom issues</h3>
+
+<p class="pBody" ps="Body" origtag="Body">There is one drawback in using the modules in the Level and Mixer tab to do algebraic computations and that is the headroom level. As the limit of the system is –256 and +256 units, and these units scale to the arithmetic numbers minus and plus four, any computation in a function that would exceed the arithmetic values –4 and +4 would be clipped and mess up the result, making the function probably useless. But most musically interesting functions do compute nicely within these limits. Whenever you would decide to explore this territory, a careful choice of functions and/or scaling is necessary. E.g. some intermediate results in a Bézier curve function would not fit, but a cubic spline function actually does fit completely within the G2 signal headroom. These two functions, which are commonly used in graphic design software to draw smooth curves, could e.g. be used to smoothly distort audio waveforms as well.</p>
+
+<h3 class="pHeading2" ps="Heading2" origtag="Heading2"><a name="LevelProcessing_5890_999882"></a>Conclusion</h3>
+
+<p class="pBody" ps="Body" origtag="Body">This subject of doing calculations is definitely an advanced subject. It is mentioned here simply because there is more to Level modules than just some convenience modules to now and then do the odd job. To summarize, the Level modules can be used for both control signal and audio signal processing and additionally for computations on steady levels. When used for computations, many times a few modules are used in a group or sub-patch, doing some function for which there is no dedicated module. In a way Level modules can be the building blocks to build your own user defined modules in the form of a sub-patch, should you ever have the need to do so. There is tremendous power behind these deceptively simple looking modules, and in time you will certainly appreciate all the extra and musical possibilities they can offer. </p>
+
+<p class="pBody" ps="Body" origtag="Body">&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
